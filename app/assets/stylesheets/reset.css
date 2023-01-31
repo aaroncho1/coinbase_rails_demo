@@ -1,0 +1,23 @@
+html, header, body, nav, img, main, a, h1, section, p, div, textarea {
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+
+    font: inherit;
+    text-align: inherit;
+    text-decoration: inherit;
+    color: inherit;
+
+    background: transparent;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%;
+}

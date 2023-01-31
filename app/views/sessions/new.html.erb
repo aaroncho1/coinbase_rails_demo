@@ -1,0 +1,28 @@
+<main class = "session-main">
+    <header class = "session-header">
+        <img class = "coinbase-logo-img" src = "/images/coinbase_logo.png">
+    </header>
+
+    <section class = "sign-in-section">
+        <h1 class = "session-sign-in-h1">Sign in to Coinbase</h1>
+        <text class = "session-text">Not your device? Use a private or incognito window to sign in.</text>
+        <form class = "session-form" action = "/session" method = "post">
+            <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token%>">
+            <label class = "session-label" for = "user_username">Email</label>
+            <input class = "session-input" type = "text" name = "user[username]" value = "<%=@user.username%>" id = "user_username">
+            <label class = "session-label" for = "user_password">Password</label>
+            <input class = "session-input" type = "password" name = "user[password]" id = "user_password">
+            <% if flash.now[:errors] %>
+                <% flash.now[:errors].each do |error| %>
+                    <text class = "session-error-text"> <%= error %> </text>
+                <% end %>
+            <% end %>
+            <input class = "session-submit-input" type = "submit" value = "Continue">
+        </form>
+    </section>
+
+    <div class = "session-div clearfix">
+        <a class = "session-div-business-a" href = "#">Sign in to a business account</a>
+        <a class = "session-div-privacy-a" href = "#">Privacy policy</a>
+    </div>
+</main>

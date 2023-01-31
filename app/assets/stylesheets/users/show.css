@@ -1,0 +1,139 @@
+.users-show-header > div, .users-show-header > nav {
+    height: 67px;
+    border: 1px solid rgb(209, 205, 205);
+}
+
+.users-show-header-div {
+    background: #1652f0;
+}
+.users-show-header-div-section > img {
+    float: left;
+    width: 120px;
+    height: 67px;
+}
+
+.users-show-header-div-section > ul {
+    float: right;
+}
+
+.users-show-header-nav-section li {
+    float: left;
+}
+
+.users-show-header-div-section, .users-show-header-nav-section {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.users-show-header-nav-section > ul {
+    padding: 0;
+    margin: 0;
+}
+
+.users-show-header-nav-section-ul a {
+    display: block;
+    padding: 22.5px 10px 22.5px 0;
+    color: gray;
+}
+
+.users-show-header-nav-section-ul > li {
+    display: block;
+    margin-right: 20px;;
+}
+
+.users-show-header-nav-section-ul a:hover {
+    border-bottom: 1px solid #1652f0;
+}
+
+.users-show-hamburger-dropdown {
+    display: block;
+}
+
+.users-show-hamburger-dropdown ul {
+    display: none;
+}
+
+.users-show-hamburger-dropdown {
+    margin: 0;
+    padding: 0;
+}
+
+.users-show-hamburger-dropdown ul {
+    margin: 0;
+    padding: 0;
+}
+
+.users-show-hamburger-dropdown > li {
+    position: relative;
+    cursor: pointer;
+    float: right;
+    padding: 22.5px;
+    font-size: large;
+    color: white;
+}
+
+.users-show-hamburger-dropdown > li:after {
+    content: "▼";
+    opacity: 50%;
+    color: white;
+    font-size: 8px;
+}
+
+.users-show-hamburger-dropdown > li:hover ul {
+    display: flex;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    flex-direction: column;
+    cursor: pointer;
+    color: #1652f0;
+}
+
+.users-show-hamburger-dropdown > li:hover ul:after {
+    content: "";
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+    border-width: 10px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -20px;
+    left: 20px;
+}
+
+.users-show-hamburger-dropdown a {
+    display: block;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+    background: white;
+}
+
+.users-show-hamburger-dropdown ul > li {
+    background: white;
+}
+
+.users-show-hamburger-dropdown form > input {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    background: #1652f0;
+    color: white;
+    padding: 5px;
+}
+
+.users-show-main {
+    width: 70%;
+    margin: 22.5px auto;
+}
+
+.users-show-main h1 {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 22.5px;
+}
+
+.users-show-hamburger-dropdown a:hover {
+    background: #1652f0;
+    color: white;
+}

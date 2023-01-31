@@ -1,0 +1,9 @@
+<h1>List of Users</h1>
+<% @users.each do |user| %>
+    Email: <%= user.username%> Name: <%= user.fname %> <%= user.lname %>
+    <form action = "<%= user_url(user) %>" method = "post">
+        <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+        <input type = "hidden" name = "_method" value = "delete">
+        <input type = "submit" value = "Delete User">
+    </form>
+<% end %>

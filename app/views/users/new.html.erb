@@ -1,0 +1,40 @@
+<nav class="users-new-nav clearfix">
+    <img class = "users-new-nav-coinbase-logo" src="/images/coinbase_logo.png">
+    <a class = "users-new-nav-a" href="/session/new">Sign In</a>
+</nav>
+
+<main class = "users-new-main clearfix">
+    <section class = "users-new-main-section">
+        <h1 class = "users-new-main-section-h1">Create an account</h1>
+        <p class = "users-new-main-p">Required fields have an asterik:*</p>
+        <form action="/users" method="post">
+            <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>">
+            <div class = "users-new-main-fname-lname-div clearfix">
+                <div class = "users-new-main-fname">
+                    <label class = "users-new-main-text-label" for = "user_fname">First name*</label>
+                    <input class = "users-new-main-text-input" type = "text" name = "user[fname]" value = "<%= @user.fname %>" id = "user_fname">
+                </div>
+                <div class = "users-new-main-lname">
+                    <label class = "users-new-main-text-label" for = "user_lname">Last name*</label>
+                    <input class = "users-new-main-text-input" type = "text" name = "user[lname]" value = "<%= @user.lname %>" id = "user_lname">
+                </div>
+            </div>
+            <label class = "users-new-main-text-label" for = "user_username">Email*</label>
+            <input class = "users-new-main-text-input" type = "text" name = "user[username]" value = "<%= @user.username %>" id = "user_username">
+            <label class = "users-new-main-text-label" for = "user_password">Password*</label>
+            <input class = "users-new-main-text-input" type = "password" name = "user[password]" id = "user_password">
+            <div class = "user-agreement-div clearfix">
+                <input class = "users-new-main-checkbox-input" type = "checkbox" id = "user_agreement">
+                <label class = "user-agreement-label" for = "user_agreement"> I certify that I am 18 years of age or older, I agree to the 
+                    <a class = "create-account-hyperlinks" href = "#">User Agreement</a>, and I have read the 
+                    <a class = "create-account-hyperlinks" href = "#">Privacy Policy</a>. 
+                </label>
+            </div>
+            <input class = "submit-input" type = "submit" value = "Create account">
+        </form>
+    </section>
+
+    <section class = "bonus-ad">
+        <img class = "bonus-ad-image" src = "/images/200_ad.png">
+    </section>
+</main>

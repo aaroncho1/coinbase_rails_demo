@@ -1,0 +1,39 @@
+<header class = "users-show-header">
+    <div class = "users-show-header-div clearfix">
+        <section class = "users-show-header-div-section">
+            <img src = "/images/blue_logo.png">
+            <ul class = "users-show-hamburger-dropdown">
+                <li><%=@user.fname%>
+                    <ul>
+                        <li><a href = "#">Settings</a></li>
+                        <li><a href = "#">Privacy</a></li>
+                        <li><a href = "#">Security</a></li>
+                        <li><form action = "/session" method = "post">
+                                <input type = "hidden" name = "_method" value = "delete">
+                                <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token%>">
+                                <input type = "submit" value = "Logout">
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <nav class = "users-show-header-nav">
+        <section class = "users-show-header-nav-section">
+            <ul class = "users-show-header-nav-section-ul clearfix">
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Buy/Sell</a></li>
+                <li><a href="#">Accounts</a></li>
+                <li><a href="#">Tools</a></li>
+            </ul>
+        </section>
+    </nav>
+</header>
+
+<main class = "users-show-main">  
+    <h1>Following</h1>
+    <img src = "/images/prices.png">
+</main>
+
